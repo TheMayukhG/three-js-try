@@ -1,0 +1,131 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing:border-box;
+}
+
+body{
+    background: #12181b;
+    height: 2000px;
+}
+.head-not-scrolled{
+    background: none;
+    height: 60px;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    transition: background 0.3s ease-in-out;
+}
+ul{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    list-style: none;
+}
+nav li{
+    display: inline-block;
+    padding: 20px;
+    position: relative;
+}
+nav li a{
+    color: #fff;
+    text-decoration: none;
+}
+.link{
+    position: relative;
+}
+.link::after{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    transform: scaleX(0);
+    background: #fff;
+    transition: transform 0.25s;
+}
+.link:hover::after{
+    transform: scaleX(1);
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+.nav-logo{
+    height: 60px;
+    width: 60px;
+}
+.button{
+    border: 1px solid #fff;
+    padding: 0.8em;
+    letter-spacing: 1px;
+    border-radius:2em;
+    transition: background 0.25s;
+    cursor: pointer;
+}
+.button:hover{
+    background: #fff;
+    color: #12181b;
+}
+.mobile{
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width:693px) {
+    .Desktop{
+        display: none;
+    }
+    #dropdown{
+        /* display: none; */
+        background: #12181b;
+        /* height: 60px; */
+        display: flex;
+        width: 100vw;
+        position: absolute;
+        right: 0;
+        top: 60px;
+        overflow: hidden;
+    }
+    .height-60{
+        height: 60px;
+    }
+    header{
+        width: 100vw;
+    }
+    .visible{
+        display: block;
+    }
+    .link-list{
+        display: inline-block;
+    }
+    .links{
+        position: absolute;
+        right: 0px;
+    }
+    .ppt{
+        width: 100vw;
+    }
+}
+@media (min-width:693px) {
+    .mobile{
+        display: none;
+    }
+}
+
+header{
+    height: 60px;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    transition: background 0.3s ease-in-out;
+}
+/* navbar chage to scroll */
+.head-scrolled{
+    background: #fff;
+    color: #12181b;
+}
